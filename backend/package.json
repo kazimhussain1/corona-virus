@@ -1,0 +1,22 @@
+{
+  "name": "corona-api",
+  "version": "1.0.0",
+  "description": "Provides an API for stats and map of the spread of corona virus.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "corona",
+    "virus",
+    "api",
+    "stats",
+    "statistics",
+    "map"
+  ],
+  "author": "GNP",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

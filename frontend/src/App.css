@@ -1,0 +1,123 @@
+.font_righteous {
+    font-family: 'Righteous', cursive;
+}
+header {
+    padding:10px 0px;
+    transition: all 300ms ease-in;
+}
+
+header .header_logo {
+    flex-grow: 1;
+}
+header .header_logo_venue {
+    font-size: 40px;
+}
+
+header .header_logo_title {
+    text-transform: uppercase;
+}
+.carrousel_wrapper {
+    height:700px;
+    overflow: hidden;
+}
+
+.carrousel_image {
+    
+    background-size: cover !important;
+}
+.countdown_wrapper {
+    position:absolute;
+    bottom: 0px;
+    color:#ffffff;
+}
+
+.countdown_wrapper .countdown_top {
+    background: #ff4800;
+    font-size: 19px;
+    padding: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.countdown_wrapper .countdown_bottom {
+    display: flex;
+    background: #d93d00;
+    padding: 10px 10px;
+}
+
+.countdown_wrapper .countdown_time {
+    font-size: 40px;
+    border-right: 1px solid #F44336;
+    margin-right: 12px;
+    padding-right: 40px;
+    margin-left:40px;
+}
+.countdown_wrapper .countdown_item:last-child .countdown_time{
+    border:none;
+}
+
+.countdown_wrapper .countdown_tag {
+    text-transform: uppercase;
+    font-size: 14px;
+   
+    text-align: center;
+}.pricing_section {
+    padding: 70px 0px;
+}
+
+.bck_black{
+    background-color: #3c3c3c;
+}
+.pricing_section h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+.pricing_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pricing_wrapper .pricing_item{
+    flex-grow: 1;
+    width: 98%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pricing_wrapper .pricing_inner_wrapper {
+    border:2px solid #ffa800;
+    padding: 0px 20px;
+}
+
+.pricing_inner_wrapper .pricing_title {
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 1px solid #ffa800;
+    padding-bottom: 0px;
+}
+.pricing_inner_wrapper .pricing_title .source {
+    font-size: 30px;
+    display: block;
+}
+.pricing_inner_wrapper .pricing_title .headline {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+}
+.pricing_inner_wrapper .pricing_description {
+    color: #b8b8b8;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0px;
+    min-height: 70px;
+}
+.pricing_inner_wrapper .time{
+    float: right;
+    margin-top: 24px;
+    font-weight: 700;
+}
+
