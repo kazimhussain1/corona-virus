@@ -36,7 +36,11 @@ class Map extends Component {
   };
   fillColorWRTData = d=>{
     const color = this.state.colors[Math.round(Math.random()*4)]
-    console.log(color)
+    const countryCode = d.properties.ISO_A2;
+    console.log(countryCode)
+
+    
+
     return color
   };
   render(){
