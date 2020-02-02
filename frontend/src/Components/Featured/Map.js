@@ -5,18 +5,21 @@ import  {
   Geography,
   ZoomableGroup
 } from "react-simple-maps";
+// import back from '../../Components/IMAGE3.jpg';
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-//import back from '../../Components/IMAGE3.jpg';
 
+
+const colors = ["#AA2277", "#183881", "#AF8C6E", "#2B8A9F", "#72A69B"]
 
 class Map extends Component {
 
   state = {
     highlighted: "",
-    hovered: false
+    hovered: false,
+    colors: ["#AA2277", "#183881", "#AF8C6E", "#2B8A9F", "#72A69B"]
   };
   handleMove = geo => {
     if (this.state.hovered) return;
@@ -31,6 +34,11 @@ class Map extends Component {
       hovered: false
     });
   };
+  fillColorWRTData = d=>{
+    const color = this.state.colors[Math.round(Math.random()*4)]
+    console.log(color)
+    return color
+  };
   render(){
   return (
   
@@ -44,7 +52,7 @@ class Map extends Component {
         <div>
           <div className="carrousel_image"
             style={{
-              // background: `url(${back})`,
+              background: `rgbA(100, 200, 255, 1)`,
               height: `${window.innerHeight}px`,
             }}>
           <ComposableMap   
@@ -79,7 +87,7 @@ class Map extends Component {
                         transition: "all 250ms"
                       },
                       hover: {
-                        fill: "#FF6F61",
+                        fill: this.fillColorWRTData(geography),
                         stroke: "#9E1030",
                         strokeWidth: 0.75,
                         outline: "none",
