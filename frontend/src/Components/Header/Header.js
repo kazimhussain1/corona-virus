@@ -43,7 +43,7 @@ export default class Header extends Component {
           <Toolbar>
             <div className="header_logo">
               <div className="font_righteous header_logo_venue">THE WUHAN VIRUS</div>
-              <div className="header_logo_title">Musical Events</div>
+              <div className="header_logo_title">Deadly Airborne Pathogen</div>
             </div>
 
            

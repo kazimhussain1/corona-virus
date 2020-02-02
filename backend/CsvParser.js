@@ -1,5 +1,5 @@
-var fs = require("fs");
-var readline = require("readline");
+var fs = require('fs');
+var readline = require('readline');
 
 class CsvParser {
   parseCsvString(csvString) {
@@ -11,15 +11,15 @@ class CsvParser {
     lineCount = 0;
 
     var lineReader = readline.createInterface({
-      input: csvString
+      input: fs.createReadStream('20200128-073300-bno-2019ncov-data.csvs')
     });
     lineReader
-      .on("line", line => {
+      .on('line', line => {
         if (lineCount >= 3) {
-          dataPoints = line.split("|");
+          dataPoints = line.split('|');
           // place|confirmed_cases|deaths|notes|sources
 
-          console.log(dataPoints[1] + "\n");
+          console.log(dataPoints[1] + '\n');
           sumConfirmed += parseInt(dataPoints[1]);
           sumDeaths += parseInt(dataPoints[2]);
           sumAffectedCountries += 1;
@@ -33,19 +33,19 @@ class CsvParser {
         }
         lineCount++;
       })
-      .on("close", () => {
+      .on('close', () => {
         data.push({
-          place: "WORLD",
+          place: 'WORLD',
           confirmed_cases: sumConfirmed,
           deaths: sumDeaths,
-          notes: "",
+          notes: '',
           affected_countries: sumAffectedCountries,
-          sources: ""
+          sources: ''
         });
         jsonData = JSON.stringify(data); //JSON.parse(data)
 
         // Or
-        fs.writeFileSync("output.json", jsonData);
+        fs.writeFileSync('output.json', jsonData);
       });
   }
 }
