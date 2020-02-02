@@ -1,28 +1,15 @@
-var fs = require("fs");
-var readline = require("readline");
+const express = require('express');
+const app = express();
+const port = 3000;
+const fs = require('fs');
 
-var lineReader = readline.createInterface({
-  input: fs.createReadStream("20200128-073300-bno-2019ncov-data.csv")
+app.get('/api/world_data', (req, res) => {
+    const world_data = fs.readFileSync('output.json');
+    res.setHeader('Content-Type', 'application/json');
+    res.send(world_data);
 });
 
-var data = [];
-var jsonData;
-lineReader
-  .on("line", line => {
-    dataPoints = line.split("|");
-    // place|confirmed_cases|deaths|notes|sources
-    data.push({
-      place: dataPoints[0],
-      confirmed_cases: dataPoints[1],
-      deaths: dataPoints[2],
-      notes: dataPoints[3],
-      sources: dataPoints[4]
-    });
-  })
-  .on("close", () => {
-    jsonData = JSON.stringify(data); //JSON.parse(data)
-    console.log(jsonData);
+app.
 
-    // Or
-    fs.writeFileSync("output.json", jsonData);
-  });
+app.set('json spaces', 40);
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
