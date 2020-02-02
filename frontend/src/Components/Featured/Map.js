@@ -11,6 +11,9 @@ import axios from 'axios';
 const geoUrl =
   'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 
+const geoUrlChina =
+  'https://raw.githubusercontent.com/deldersveld/topojson/master/countries/china/china-provinces.json';
+
 const colors = ['#AA2277', '#183881', '#AF8C6E', '#2B8A9F', '#72A69B'];
 
 class Map extends Component {
@@ -63,8 +66,8 @@ class Map extends Component {
 
   fillColorWRTData = d => {
     const countryCode = d.properties.ISO_A2;
-    
-    const {mapData} = this.state;
+
+    const { mapData } = this.state;
 
     mapData.forEach(item => {
       // if(item)
@@ -92,8 +95,8 @@ class Map extends Component {
           >
             <ComposableMap style={{ width: '100%', height: '100%' }}>
               <ZoomableGroup zoom={0.82}>
-                <Geographies geography={geoUrl}>
-                  {(geographies, projection) =>
+                <Geographies geography={geoUrlChina}>
+                  {(geographies, projection) => {
                     geographies.map((geography, i) => (
                       <Geography
                         key={i}
@@ -130,8 +133,9 @@ class Map extends Component {
                           }
                         }}
                       />
-                    ))
-                  }
+                    ));
+                    console.log(geographies);
+                  }}
                 </Geographies>
               </ZoomableGroup>
             </ComposableMap>
