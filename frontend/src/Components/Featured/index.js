@@ -1,5 +1,5 @@
 import React from 'react';
-import BackgroundMap from './Bck_Map';
+import BackgroundMap from './Map';
 import CountDown from './CountDown';
 
 const index = () => {
