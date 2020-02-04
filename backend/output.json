@@ -1,7 +1,7 @@
 [
     {
         "place": "Hubei",
-        "confirmed_cases": 2,
+        "confirmed_cases": 2714,
         "deaths": 100,
         "notes": "563 serious, 127 critical",
         "sources": "http://wjw.hubei.gov.cn/fbjd/dtyw/202001/t20200127_2015306.shtml"
@@ -210,11 +210,12 @@
         "sources": "https://wsjkw.qinghai.gov.cn/zhxw/xwzx/2020/01/27/1580130159651.html"
     },
     {
-        "place": "CHINA TOTAL",
-        "confirmed_cases": 4,
+        "place": "China",
+        "confirmed_cases": 4607,
         "deaths": 106,
         "notes": "",
-        "sources": ""
+        "sources": "",
+        "code": "CN"
     },
     {
         "place": "Hong Kong",
@@ -368,10 +369,10 @@
     },
     {
         "place": "WORLD",
-        "confirmed_cases": 2053,
-        "deaths": 212,
+        "confirmed_cases": 4761,
+        "deaths": 106,
         "notes": "",
-        "affected_countries": 50,
+        "affected_countries": 20,
         "sources": ""
     }
 ]
