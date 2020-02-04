@@ -69,11 +69,14 @@ class Map extends Component {
 
     const { mapData } = this.state;
 
+    let color = '#e5e5e5';
     mapData.forEach(item => {
-      // if(item)
+      if (item.code == countryCode) {
+        if (item.confirmed_cases > 0) color = '#AA5555';
+      }
     });
 
-    return '#' + ((Math.random() * 0xffffff) << 0).toString(16);
+    return color;
   };
   render() {
     const { mapData } = this.state;
@@ -95,8 +98,8 @@ class Map extends Component {
           >
             <ComposableMap style={{ width: '100%', height: '100%' }}>
               <ZoomableGroup zoom={0.82}>
-                <Geographies geography={geoUrlChina}>
-                  {(geographies, projection) => {
+                <Geographies geography={geoUrl}>
+                  {(geographies, projection) =>
                     geographies.map((geography, i) => (
                       <Geography
                         key={i}
@@ -133,9 +136,8 @@ class Map extends Component {
                           }
                         }}
                       />
-                    ));
-                    console.log(geographies);
-                  }}
+                    ))
+                  }
                 </Geographies>
               </ZoomableGroup>
             </ComposableMap>
