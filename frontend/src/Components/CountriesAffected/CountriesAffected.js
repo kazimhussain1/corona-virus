@@ -4,60 +4,35 @@ import Table from 'react-bootstrap/Table'
 
 export default class CountriesAffected extends Component {
   
-  state={
-      arr:[
-        {
-          name:'Australia',
-          NumberOfInfecions:'14462',
-          Deaths:'304',
-          Cured:'328'
-        },
-          {
-            name: 'China',
-            NumberOfInfecions: '1444462',
-            Deaths: '3004',
-            Cured: '328'
-          },
-          {
-            name: 'India',
-            NumberOfInfecions: '14462',
-            Deaths: '304',
-            Cured: '328'
-          },
-          {
-            name: 'South Korea',
-            NumberOfInfecions: '14462',
-            Deaths: '304',
-            Cured: '328'
-          }
-            
+  constructor(props){
+    super(props)
 
-            
-        
-      ]
+    this.state={
+      data:this.props.data
+    }
   }
   
 
-  showTable=()=>{
-    this.state.arr.map((country,key)=>(
-          <tr>
-            <td>
-                {this.state.arr[key].name}
-            </td>
-            <td>
-              {this.state.arr[key].NumberOfInfecions}
-            </td>
-            <td>
-              {this.state.arr[key].Deaths}
-            </td>
+  // showTable=()=>{
+  //   this.state.arr.map((country,key)=>(
+  //         <tr>
+  //           <td>
+  //               {this.state.arr[key].name}
+  //           </td>
+  //           <td>
+  //             {this.state.arr[key].NumberOfInfecions}
+  //           </td>
+  //           <td>
+  //             {this.state.arr[key].Deaths}
+  //           </td>
           
-            <td>
-              {this.state.arr[key].Cured}
-            </td>
+  //           <td>
+  //             {this.state.arr[key].Cured}
+  //           </td>
           
-          </tr>
-    ))
-  }
+  //         </tr>
+  //   ))
+  // }
   
   
   render() {
@@ -73,37 +48,32 @@ export default class CountriesAffected extends Component {
         <Table striped bordered hover variant="dark">
             <thead>
               <tr>
-                <th>
-                    Total:{this.state.arr.length}
+                <th className="tableheaderone">
+                    Total:{this.state.data.length-1}
                 </th>
-                <th>
+              <th className="tableheaderone">
                   Number of Infections
                 </th>
-                <th>
+              <th className="tableheaderone">
                   Deaths
                 </th>
-                <th>
-                  Cured
-                </th>
+               
               </tr>
             </thead>
             <tbody>
-            {this.state.arr.map((country, key) => (
+            {this.state.data.map((country, key) => (
               <tr>
                 <td>
-                  {this.state.arr[key].name}
+                  {this.state.data[key].place}
                 </td>
                 <td>
-                  {this.state.arr[key].NumberOfInfecions}
+                  {this.state.data[key].confirmed_cases}
                 </td>
                 <td>
-                  {this.state.arr[key].Deaths}
+                  {this.state.data[key].deaths}
                 </td>
 
-                <td>
-                  {this.state.arr[key].Cured}
-                </td>
-
+               
               </tr>
             ))}
             </tbody>

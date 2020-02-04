@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Slide from 'react-reveal/Slide';
 class CountDown extends Component {
-  state = {
+  
+  constructor(props){
+  super(props)
+  
+this.state = {
     
-    infected: '0',
-    Deaths: '0',
-    Countries: '0',
+  infected: this.props.total.confirmed_cases,
+    Deaths: this.props.total.deaths,
+  Countries: this.props.total.affected_countries,
   
   }
   
-
+  }
   render() {
     return (
 

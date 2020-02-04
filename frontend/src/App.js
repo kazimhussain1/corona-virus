@@ -1,23 +1,19 @@
-import React from 'react';
-import Header from './Components/Header/Header';
-import Featured from './Components/Featured/index';
-import LiveFeed from './Components/LiveUpdates/liveIndex';
-import Table from './Components/Tablefeed/Tablefeed';
-import Graph from './Components/Graph/Graph';
-import CountryTable from './Components/CountriesAffected/CountriesAffected';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <React.Fragment>
-        <Header/>
-        <Featured/>
-        <LiveFeed/>
-        <Table/>
-        <CountryTable/>
-    </React.Fragment>
-    
-  );
+import './App.css';
+import AppComponent from './Components/appcomponent';
+
+
+class App extends Component {
+  render() {
+    // console.log(this.state.data)
+    return (
+      <React.Fragment>
+        <AppComponent/>
+      </React.Fragment >
+
+    );
+  }
 }
 
 export default App;
