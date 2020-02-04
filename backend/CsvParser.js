@@ -6,7 +6,8 @@ var sumConfirmed = 0;
 var sumDeaths = 0;
 var data = [];
 var jsonData;
-lineCount = 0;
+var lineCount = 0;
+var isCountry = false;
 
 function loadCountryCodes() {
   var codesArray = [];
@@ -47,19 +48,49 @@ lineReader
   .on('line', line => {
     if (lineCount >= 3) {
       dataPoints = line.split('|');
-      // place|confirmed_cases|deaths|notes|sources
 
-      // console.log(dataPoints[1] + '\n');
-      sumConfirmed += parseInt(dataPoints[1]);
-      sumDeaths += parseInt(dataPoints[2]);
-      sumAffectedCountries += 1;
-      data.push({
-        place: dataPoints[0],
-        confirmed_cases: parseInt(dataPoints[1]),
-        deaths: parseInt(dataPoints[2]),
-        notes: dataPoints[3],
-        sources: dataPoints[4]
-      });
+      if (dataPoints[0] === 'CHINA TOTAL') {
+        isCountry = true;
+
+        const deaths = parseInt(dataPoints[2].replace(',', ''));
+
+        sumConfirmed += parseInt(dataPoints[1].replace(',', ''));
+        sumDeaths += deaths;
+        sumAffectedCountries += 1;
+
+        data.push({
+          place: 'China',
+
+          confirmed_cases: parseInt(dataPoints[1].replace(',', '')),
+          deaths: deaths,
+          notes: dataPoints[3],
+          sources: dataPoints[4]
+        });
+      } else if (isCountry) {
+        const deaths = parseInt(dataPoints[2].replace(',', ''));
+
+        sumConfirmed += parseInt(dataPoints[1].replace(',', ''));
+        sumDeaths += deaths;
+        sumAffectedCountries += 1;
+
+        data.push({
+          place: dataPoints[0],
+          confirmed_cases: parseInt(dataPoints[1].replace(',', '')),
+          deaths: deaths,
+          notes: dataPoints[3],
+          sources: dataPoints[4]
+        });
+      } else {
+        const deaths = parseInt(dataPoints[2].replace(',', ''));
+
+        data.push({
+          place: dataPoints[0],
+          confirmed_cases: parseInt(dataPoints[1].replace(',', '')),
+          deaths: deaths,
+          notes: dataPoints[3],
+          sources: dataPoints[4]
+        });
+      }
     }
     lineCount++;
   })
