@@ -121,3 +121,18 @@ header .header_logo_title {
     font-weight: 700;
 }
 
+.Tablefeed{
+    margin-top: 10px;
+    padding-bottom: 20px;
+        min-height: 59vh;
+
+}
+
+.Tablefeed .Tablefeed-header{
+    text-align: center;
+}
+#Countryhead{
+    text-align: center;
+    padding-bottom: 14px;
+}
+
