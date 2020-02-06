@@ -1,0 +1,469 @@
+[
+    {
+        "place": "Hubei",
+        "confirmed_cases": 16678,
+        "deaths": 479,
+        "notes": "1,809 serious, 711 critical",
+        "sources": "http://wjw.hubei.gov.cn/fbjd/dtyw/202002/t20200205_2019293.shtml"
+    },
+    {
+        "place": "Zhejiang",
+        "confirmed_cases": 895,
+        "deaths": 0,
+        "notes": "49 serious, 16 critical",
+        "sources": "https://www.zjwjw.gov.cn/art/2020/2/5/art_1202101_41877651.html"
+    },
+    {
+        "place": "Guangdong",
+        "confirmed_cases": 813,
+        "deaths": 0,
+        "notes": "60 serious, 26 critical",
+        "sources": "http://wsjkw.gd.gov.cn/zwyw_yqxx/content/post_2883626.html"
+    },
+    {
+        "place": "Henan",
+        "confirmed_cases": 764,
+        "deaths": 2,
+        "notes": "38 serious, 19 critical",
+        "sources": "https://m.weibo.cn/status/4468524224936382"
+    },
+    {
+        "place": "Hunan",
+        "confirmed_cases": 661,
+        "deaths": 0,
+        "notes": "57 serious",
+        "sources": "http://wjw.hunan.gov.cn/wjw/xxgk/gzdt/zyxw_1/202002/t20200205_11170191.html"
+    },
+    {
+        "place": "Anhui",
+        "confirmed_cases": 530,
+        "deaths": 0,
+        "notes": "5 critical",
+        "sources": "http://wjw.ah.gov.cn/news_details_54548.html"
+    },
+    {
+        "place": "Jiangxi",
+        "confirmed_cases": 476,
+        "deaths": 0,
+        "notes": " 37 serious ",
+        "sources": "http://hc.jiangxi.gov.cn/doc/2020/02/04/138072.shtml"
+    },
+    {
+        "place": "Chongqing",
+        "confirmed_cases": 366,
+        "deaths": 2,
+        "notes": "24 serious, 10 critical",
+        "sources": "http://wsjkw.cq.gov.cn/tzgg/20200205/252088.html"
+    },
+    {
+        "place": "Jiangsu",
+        "confirmed_cases": 341,
+        "deaths": 0,
+        "notes": "3 serious",
+        "sources": "https://m.weibo.cn/status/4468526570239002"
+    },
+    {
+        "place": "Sichuan",
+        "confirmed_cases": 302,
+        "deaths": 1,
+        "notes": "14 critical",
+        "sources": "https://m.weibo.cn/status/4468522342120636"
+    },
+    {
+        "place": "Shandong",
+        "confirmed_cases": 298,
+        "deaths": 0,
+        "notes": "21 serious, 4 critical",
+        "sources": "https://m.weibo.cn/status/4468522950108669"
+    },
+    {
+        "place": "Beijing",
+        "confirmed_cases": 228,
+        "deaths": 1,
+        "notes": "9 critical",
+        "sources": "https://m.weibo.cn/status/4468277256747197"
+    },
+    {
+        "place": "Shanghai",
+        "confirmed_cases": 233,
+        "deaths": 1,
+        "notes": "8 serious, 7 critical",
+        "sources": "https://m.weibo.cn/detail/4468511725846726"
+    },
+    {
+        "place": "Fujian",
+        "confirmed_cases": 194,
+        "deaths": 0,
+        "notes": "15 serious, 7 critical",
+        "sources": "https://mp.weixin.qq.com/s/g-KCNP1tEzclt40OUxnFgg"
+    },
+    {
+        "place": "Shaanxi",
+        "confirmed_cases": 142,
+        "deaths": 0,
+        "notes": "1+ serious",
+        "sources": "http://sxwjw.shaanxi.gov.cn/art/2020/2/4/art_9_67724.html"
+    },
+    {
+        "place": "Guangxi",
+        "confirmed_cases": 150,
+        "deaths": 0,
+        "notes": "10 serious, 4 critical",
+        "sources": "http://wsjkw.gxzf.gov.cn/zhuantiqu/ncov/ncovyqtb/2020/0205/68385.html"
+    },
+    {
+        "place": "Yunnan",
+        "confirmed_cases": 122,
+        "deaths": 0,
+        "notes": "13 serious, 3 critical",
+        "sources": "https://m.weibo.cn/status/4468501408683388"
+    },
+    {
+        "place": "Hebei",
+        "confirmed_cases": 135,
+        "deaths": 1,
+        "notes": "12 serious",
+        "sources": "http://www.hebwst.gov.cn/index.do?id=396743&amp;templet=content&amp;cid=14"
+    },
+    {
+        "place": "Heilongjiang",
+        "confirmed_cases": 190,
+        "deaths": 2,
+        "notes": "21 serious",
+        "sources": "http://wsjkw.hlj.gov.cn/index.php/Home/Zwgk/show/newsid/7759/navid/42/stypeid/"
+    },
+    {
+        "place": "Liaoning",
+        "confirmed_cases": 81,
+        "deaths": 0,
+        "notes": "6 serious",
+        "sources": "http://wsjk.ln.gov.cn/wst_wsjskx/202002/t20200204_3733940.html"
+    },
+    {
+        "place": "Hainan",
+        "confirmed_cases": 80,
+        "deaths": 1,
+        "notes": "10 serious",
+        "sources": "https://m.weibo.cn/detail/4468015657466283 http://wst.hainan.gov.cn/swjw/rdzt/yqfk/202002/t20200204_2743793.html https://m.weibo.cn/detail/4468015657466283"
+    },
+    {
+        "place": "Shanxi",
+        "confirmed_cases": 81,
+        "deaths": 0,
+        "notes": "4 serious, 4 critical",
+        "sources": "http://wjw.shanxi.gov.cn/wjywl02/24697.hrh"
+    },
+    {
+        "place": "Tianjin",
+        "confirmed_cases": 67,
+        "deaths": 0,
+        "notes": "17 serious, 4 critical",
+        "sources": "https://m.weibo.cn/detail/4468345388281570"
+    },
+    {
+        "place": "Gansu",
+        "confirmed_cases": 57,
+        "deaths": 0,
+        "notes": "7 serious, 3 critical",
+        "sources": "http://wsjk.gansu.gov.cn/single/10910/83666.html"
+    },
+    {
+        "place": "Guizhou",
+        "confirmed_cases": 64,
+        "deaths": 0,
+        "notes": "6 serious, 2 critical",
+        "sources": "https://m.weibo.cn/status/4468526477631339"
+    },
+    {
+        "place": "Ningxia",
+        "confirmed_cases": 34,
+        "deaths": 0,
+        "notes": "6 serious",
+        "sources": "http://wsjkw.nx.gov.cn/info/1140/13484.htm"
+    },
+    {
+        "place": "Inner Mongolia",
+        "confirmed_cases": 35,
+        "deaths": 0,
+        "notes": "",
+        "sources": "http://wjw.nmg.gov.cn/doc/2020/02/04/290542.shtml"
+    },
+    {
+        "place": "Jilin",
+        "confirmed_cases": 54,
+        "deaths": 0,
+        "notes": "3 serious, 2 critical",
+        "sources": "https://m.weibo.cn/status/4468517891861972"
+    },
+    {
+        "place": "Xinjiang",
+        "confirmed_cases": 29,
+        "deaths": 0,
+        "notes": "8 serious, 2 critical",
+        "sources": "http://www.xjhfpc.gov.cn/info/1495/17972.htm"
+    },
+    {
+        "place": "Qinghai",
+        "confirmed_cases": 17,
+        "deaths": 0,
+        "notes": "1 serious",
+        "sources": "https://wsjkw.qinghai.gov.cn/zhxw/xwzx/2020/02/05/1580863223569.html"
+    },
+    {
+        "place": "Tibet",
+        "confirmed_cases": 1,
+        "deaths": 0,
+        "notes": "Stable",
+        "sources": "http://www.nhc.gov.cn/yjb/s7860/202001/e71bd2e7a0824ca69f87bbf1bef2a3c9.shtml"
+    },
+    {
+        "place": "Undisclosed",
+        "confirmed_cases": 206,
+        "deaths": 0,
+        "notes": "",
+        "sources": "http://www.nhc.gov.cn/yjb/s7860/202002/17a03704a99646ffad6807bc806f37a4.shtml"
+    },
+    {
+        "place": "China",
+        "confirmed_cases": 24324,
+        "deaths": 490,
+        "notes": "3,219 serious, 892 recovered, 23,260 suspected",
+        "sources": "",
+        "code": "CN"
+    },
+    {
+        "place": "Hong Kong",
+        "confirmed_cases": 18,
+        "deaths": 1,
+        "notes": "",
+        "sources": "https://www.info.gov.hk/gia/general/202002/05/P2020020400729.htm",
+        "code": "HK"
+    },
+    {
+        "place": "Taiwan",
+        "confirmed_cases": 11,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.cdc.gov.tw/Bulletin/Detail/UkMLn272PYqss-tXBbIFoQ?typeid=9",
+        "code": "TW"
+    },
+    {
+        "place": "Macau",
+        "confirmed_cases": 10,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://news.gov.mo/detail/zh-hant/N20BDPAzBd?3",
+        "code": "MO"
+    },
+    {
+        "place": "GREATER CHINA TOTAL",
+        "confirmed_cases": 39,
+        "deaths": 1,
+        "notes": "0 serious",
+        "sources": ""
+    },
+    {
+        "place": "Japan",
+        "confirmed_cases": 33,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.mhlw.go.jp/stf/newpage_09276.html",
+        "code": "JP"
+    },
+    {
+        "place": "Thailand",
+        "confirmed_cases": 25,
+        "deaths": 0,
+        "notes": "1 serious, 8 recovered",
+        "sources": "https://www.bbc.com/thai/thailand-51367988",
+        "code": "TH"
+    },
+    {
+        "place": "Singapore",
+        "confirmed_cases": 24,
+        "deaths": 0,
+        "notes": "1 recovered",
+        "sources": "https://www.moh.gov.sg/news-highlights/details/confirmed-cases-of-local-transmission-of-novel-coronavirus-infection-in-singapore",
+        "code": "SG"
+    },
+    {
+        "place": "South Korea",
+        "confirmed_cases": 18,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.yna.co.kr/view/AKR20200203098600017",
+        "code": "KR"
+    },
+    {
+        "place": "Australia",
+        "confirmed_cases": 13,
+        "deaths": 0,
+        "notes": "2 recovered",
+        "sources": "https://www.health.qld.gov.au/news-events/doh-media-releases/releases/queensland-coronavirus-update3",
+        "code": "AU"
+    },
+    {
+        "place": "Germany",
+        "confirmed_cases": 12,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.stmgp.bayern.de/presse/aktuelle-informationen-zur-coronavirus-lage-in-bayern-bayerisches-gesundheitsministerium-10/",
+        "code": "DE"
+    },
+    {
+        "place": "Malaysia",
+        "confirmed_cases": 10,
+        "deaths": 0,
+        "notes": "Stable",
+        "sources": "https://twitter.com/KKMPutrajaya/status/1224593259176968194",
+        "code": "MY"
+    },
+    {
+        "place": "United States",
+        "confirmed_cases": 11,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://bnonews.com/wp-content/uploads/2020/02/222020Case.pdf",
+        "code": "US"
+    },
+    {
+        "place": "Vietnam",
+        "confirmed_cases": 10,
+        "deaths": 0,
+        "notes": "3 recovered",
+        "sources": "https://www.vietnamnet.vn/vn/thoi-su/nguoi-thu-10-nhiem-corona-da-den-nha-cong-nhan-o-vinh-phuc-hat-karaoke-613730.html",
+        "code": "VN"
+    },
+    {
+        "place": "France",
+        "confirmed_cases": 6,
+        "deaths": 0,
+        "notes": "1 serious",
+        "sources": "https://www.francetvinfo.fr/sante/maladie/coronavirus/coronavirus-2019-ncov-les-six-cas-confirmes-en-france-sont-dans-un-etat-stable-selon-le-directeur-general-de-la-sante_3811051.html",
+        "code": "FR"
+    },
+    {
+        "place": "UAE",
+        "confirmed_cases": 5,
+        "deaths": 0,
+        "notes": "Stable",
+        "sources": "https://www.wam.ae/en/details/1395302820367"
+    },
+    {
+        "place": "Canada",
+        "confirmed_cases": 5,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.cbc.ca/news/canada/british-columbia/2nd-case-of-coronavirus-confirmed-in-b-c-1.5451915",
+        "code": "CA"
+    },
+    {
+        "place": "England",
+        "confirmed_cases": 2,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.gov.uk/government/news/cmo-confirms-cases-of-coronavirus-in-england"
+    },
+    {
+        "place": "Russia",
+        "confirmed_cases": 2,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://tass.ru/obschestvo/7656549"
+    },
+    {
+        "place": "Philippines",
+        "confirmed_cases": 2,
+        "deaths": 1,
+        "notes": "",
+        "sources": "https://twitter.com/WHOPhilippines/status/1223797298477424641",
+        "code": "PH"
+    },
+    {
+        "place": "India",
+        "confirmed_cases": 3,
+        "deaths": 0,
+        "notes": "Stable",
+        "sources": "https://www.pib.gov.in/PressReleseDetail.aspx?PRID=1601681",
+        "code": "IN"
+    },
+    {
+        "place": "Italy",
+        "confirmed_cases": 2,
+        "deaths": 0,
+        "notes": "2 serious",
+        "sources": "http://www.rainews.it/dl/rainews/articoli/Conte-due-casi-di-coronavirus-accertati-in-Italia-60b4294a-3a3f-4b05-ad1f-b096d1c60110.html",
+        "code": "IT"
+    },
+    {
+        "place": "Nepal",
+        "confirmed_cases": 1,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://kathmandupost.com/2/2020/01/24/officials-confirm-novel-coronavirus-in-nepali-man-who-returned-from-wuhan-earlier-this-month",
+        "code": "NP"
+    },
+    {
+        "place": "Cambodia",
+        "confirmed_cases": 1,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://twitter.com/VOD_English/status/1221769368180121603",
+        "code": "KH"
+    },
+    {
+        "place": "Sri Lanka",
+        "confirmed_cases": 1,
+        "deaths": 0,
+        "notes": "1 recovered",
+        "sources": "https://www.reuters.com/article/us-health-china-sri-lanka/sri-lanka-confirms-first-case-of-coronavirus-health-official-idUSKBN1ZQ1WF",
+        "code": "LK"
+    },
+    {
+        "place": "Finland",
+        "confirmed_cases": 1,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.hs.fi/kotimaa/art-2000006387778.html",
+        "code": "FI"
+    },
+    {
+        "place": "Sweden",
+        "confirmed_cases": 1,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.folkhalsomyndigheten.se/nyheter-och-press/nyhetsarkiv/2020/januari/bekraftat-fall-av-nytt-coronavirus-i-sverige/",
+        "code": "SE"
+    },
+    {
+        "place": "Spain",
+        "confirmed_cases": 1,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.antena3.com/noticias/sociedad/confirmado-caso-coronavirus-gomera_202001315e34a9380cf2cfb788f47b07.html",
+        "code": "ES"
+    },
+    {
+        "place": "Belgium",
+        "confirmed_cases": 1,
+        "deaths": 0,
+        "notes": "",
+        "sources": "https://www.info-coronavirus.be/nl/2020/02/04/gerepatrieerde-landgenoot-testte-positief-op-het-nieuwe-coronavirus/",
+        "code": "BE"
+    },
+    {
+        "place": "INTERNATIONAL TOTAL",
+        "confirmed_cases": 190,
+        "deaths": 1,
+        "notes": "4 serious",
+        "sources": ""
+    },
+    {
+        "place": "WORLD",
+        "confirmed_cases": 24782,
+        "deaths": 494,
+        "notes": "",
+        "affected_countries": 30,
+        "sources": ""
+    }
+]

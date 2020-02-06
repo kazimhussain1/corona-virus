@@ -37,7 +37,7 @@ function loadCountryCodes() {
       });
 
       jsonData = JSON.stringify(data); //JSON.parse(data)
-      fs.writeFileSync('output.json', jsonData);
+      fs.writeFileSync('corona-data.json', jsonData);
     });
 }
 

@@ -3,15 +3,15 @@ import Table from 'react-bootstrap/Table'
 
 
 export default class CountriesAffected extends Component {
-  
-  constructor(props){
+
+  constructor(props) {
     super(props)
 
-    this.state={
-      data:this.props.data
+    this.state = {
+      data: this.props.data
     }
   }
-  
+
 
   // showTable=()=>{
   //   this.state.arr.map((country,key)=>(
@@ -25,19 +25,19 @@ export default class CountriesAffected extends Component {
   //           <td>
   //             {this.state.arr[key].Deaths}
   //           </td>
-          
+
   //           <td>
   //             {this.state.arr[key].Cured}
   //           </td>
-          
+
   //         </tr>
   //   ))
   // }
-  
-  
+
+
   render() {
     return (
-      <div className="CountriesAffected">
+      <div className="CountriesAffected mr-5 ml-5">
         <div classsName="tableHead">
           <span>
             <h1 id="Countryhead">Countries / Regions Affected</h1>
@@ -46,21 +46,21 @@ export default class CountriesAffected extends Component {
 
         </div>
         <Table striped bordered hover variant="dark">
-            <thead>
-              <tr>
-                <th className="tableheaderone">
-                    Total:{this.state.data.length-1}
+          <thead>
+            <tr>
+              <th className="tableheaderone">
+                Total:{this.state.data.length - 1}
+              </th>
+              <th className="tableheaderone">
+                Number of Infections
                 </th>
               <th className="tableheaderone">
-                  Number of Infections
+                Deaths
                 </th>
-              <th className="tableheaderone">
-                  Deaths
-                </th>
-               
-              </tr>
-            </thead>
-            <tbody>
+
+            </tr>
+          </thead>
+          <tbody>
             {this.state.data.map((country, key) => (
               <tr>
                 <td>
@@ -73,10 +73,10 @@ export default class CountriesAffected extends Component {
                   {this.state.data[key].deaths}
                 </td>
 
-               
+
               </tr>
             ))}
-            </tbody>
+          </tbody>
         </Table>
       </div>
     )
