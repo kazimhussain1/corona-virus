@@ -5,7 +5,7 @@ const fs = require('fs');
 const cors = require('cors');
 const cron = require('cron');
 const axios = require('axios');
-const { Worker } = require('worker_threads')
+//const { Worker } = require('worker_threads')
 
 app.use(cors());
 
@@ -29,22 +29,22 @@ app.get('/api/news', (req, res) => {
 
 
 
-function runService(workerData) {
-  return new Promise((resolve, reject) => {
-    const worker = new Worker('./utils/news-writer.js', { workerData });
-    worker.on('message', resolve);
-    worker.on('error', reject);
-    worker.on('exit', (code) => {
-      if (code !== 0)
-        reject(new Error(`Worker stopped with exit code ${code}`));
-    })
-  })
-}
+// function runService(workerData) {
+//   return new Promise((resolve, reject) => {
+//     const worker = new Worker('./utils/news-writer.js', { workerData });
+//     worker.on('message', resolve);
+//     worker.on('error', reject);
+//     worker.on('exit', (code) => {
+//       if (code !== 0)
+//         reject(new Error(`Worker stopped with exit code ${code}`));
+//     })
+//   })
+// }
 
-async function run(data) {
-  const result = await runService(data)
-  console.log(result);
-}
+// async function run(data) {
+//   const result = await runService(data)
+//   console.log(result);
+// }
 
 
 // axios.get('https://newsapi.org/v2/top-headlines?q=corona%20virus&category=health&apiKey=44abcbafefe8454aa0078c14f2c50266')
