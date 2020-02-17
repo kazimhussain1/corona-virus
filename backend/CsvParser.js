@@ -103,7 +103,8 @@ lineReader
       affected_countries: sumAffectedCountries,
       sources: ''
     });
-    // jsonData = JSON.stringify(data); //JSON.parse(data)
-    // fs.writeFileSync('output.json', jsonData);
+
+    jsonData = JSON.stringify(data); //JSON.parse(data)
+    fs.writeFileSync('output.json', jsonData);
     loadCountryCodes();
   });

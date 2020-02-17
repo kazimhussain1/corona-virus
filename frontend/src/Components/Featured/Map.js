@@ -9,7 +9,7 @@ import {
 
 // const geoUrl =
 //   'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
-const geoUrl = 'http://localhost:9000/api/mapTopoData'
+const geoUrl = 'http://localhost:9000/api/mapTopoData';
 const geoUrlChina =
   'https://raw.githubusercontent.com/deldersveld/topojson/master/countries/china/china-provinces.json';
 
@@ -52,10 +52,10 @@ class Map extends Component {
 
     const { mapData } = this.state;
 
-    let color = '#e5e5e5';
+    let color = '#424242';
     mapData.forEach(item => {
       if (item.code == countryCode) {
-        if (item.confirmed_cases > 0) color = '#AA5555';
+        if (item.confirmed_cases > 0) color = '#AA0F0F';
       }
     });
 
@@ -75,7 +75,7 @@ class Map extends Component {
           <div
             className="carrousel_image"
             style={{
-              background: `rgbA(100, 200, 255, 1)`,
+              background: `rgba(50, 50, 50, 1)`,
               height: `${window.innerHeight}px`
             }}
           >
@@ -96,7 +96,7 @@ class Map extends Component {
                             fill: this.fillColorWRTData(geography),
                             stroke:
                               geography.properties.CONTINENT ===
-                                this.state.highlighted
+                              this.state.highlighted
                                 ? '#9E1030'
                                 : '#B2A27D',
                             strokeWidth: 0.75,
