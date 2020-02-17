@@ -38,20 +38,33 @@ header .header_logo_title {
     display: inline-block;
     text-transform: uppercase;
 }
+.root{
+    overflow-x: scroll;
+}
+@media screen and (min-width:374px) and (max-width:768px){
+    .countdown{
+    font-size: 14px !important;
+    border-right: 1px solid #F44336;
+    margin-right: 12px;
+    padding-right: 40px;
+    margin-left: 40px;
+    }
+}
 
 .countdown_wrapper .countdown_bottom {
     display: flex;
     background: #d93d00;
     padding: 10px 10px;
 }
-
-.countdown_wrapper .countdown_time {
+ 
+.countdown_wrapper .countdown_time{
     font-size: 40px;
     border-right: 1px solid #F44336;
     margin-right: 12px;
     padding-right: 40px;
     margin-left:40px;
 }
+
 .countdown_wrapper .countdown_item:last-child .countdown_time{
     border:none;
 }
@@ -137,5 +150,36 @@ header .header_logo_title {
 }
 .tableheaderone{
     font-size: 1.2rem;
+}
+.CountriesAffected{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+@media screen and (max-width:400px){
+    .countdown{
+            font-size: 14px !important;
+    border-right: 1px solid #F44336;
+    margin-right: 0px !important; 
+     padding-right: 0px !important; 
+     margin-left:0px !important; 
+     padding-left: 10px !important;
+    }
+    .countdown_wrapper .countdown_tag{
+    font-size: 12px;
+    
+    padding-right: 10px;
+    }
+  .CountriesAffected{
+      overflow-x: scroll;
+  }
+   
+}
+
+@media screen and (max-width:768px){
+    .CountriesAffected{
+        margin-right:0rem;
+        margin-left: 0rem;
+    }
 }
 
