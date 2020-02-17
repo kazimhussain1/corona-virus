@@ -37,7 +37,7 @@ export default class CountriesAffected extends Component {
 
   render() {
     return (
-      <div className="CountriesAffected mr-5 ml-5">
+      <div className="CountriesAffected">
         <div classsName="tableHead">
           <span>
             <h1 id="Countryhead">Countries / Regions Affected</h1>
