@@ -1,12 +1,13 @@
 var fs = require('fs');
-var readline = require('readline');
 const axios = require('axios');
 const dataprocess = require('./dataprocess.js');
 const path = require('path');
 
+const { workerData, parentPort } = require('worker_threads');
+
 function loadCountryCodes(jsonData, fileName) {
   let codesArray = JSON.parse(
-    fs.readFileSync(path.join(__dirname, 'country-codes.json'), 'utf8')
+    fs.readFileSync(path.join(__dirname, '../', 'country-codes.json'), 'utf8')
   );
 
   jsonData.forEach(object => {
@@ -19,23 +20,27 @@ function loadCountryCodes(jsonData, fileName) {
   });
 
   newData = JSON.stringify(jsonData); //JSON.parse(data)
-  if (!fs.existsSync(path.join(__dirname, 'virus-data'))) {
-    fs.mkdirSync(path.join(__dirname, 'virus-data'));
+  if (!fs.existsSync(path.join(__dirname, '../', 'virus-data'))) {
+    fs.mkdirSync(path.join(__dirname, '../', 'virus-data'));
   }
   fs.writeFileSync(
-    path.join(__dirname, 'virus-data', fileName.replace('.csv', '.json')),
+    path.join(
+      __dirname,
+      '../',
+      'virus-data',
+      fileName.replace('.csv', '.json')
+    ),
     newData
   );
 
   fs.writeFileSync(
-    path.join(__dirname, 'virus-data', 'latestfile.txt'),
+    path.join(__dirname, '../', 'virus-data', 'latestfile.txt'),
     fileName
   );
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-var updatedName;
 var nameArray = [];
 var saveFile = [];
 var index = 0;
@@ -67,12 +72,7 @@ function writeGitFile() {
         let buff = Buffer.alloc(jsonBody.length, jsonBody, 'base64');
 
         let Gitcontent = buff.toString('ascii');
-        //console.log(Gitcontent)
         let jsonData = dataprocess.parseCsvString(Gitcontent);
-        //console.log(jsonData);
-        //const folderPath = './virus-data/' + saveFile[i]
-        //let PATH = path.join(folderPath,saveFile[i])
-        //console.log('Path: ' + folderPath)
         loadCountryCodes(jsonData, saveFile[index]);
 
         index++;
@@ -85,6 +85,8 @@ function writeGitFile() {
       .then(function() {
         // always executed
       });
+  } else {
+    parentPort.postMessage({ message: 'Git Files Succesfully Fetched.' });
   }
 }
 
@@ -101,7 +103,7 @@ axios
   .then(function(res) {
     nameArray = res.data;
     var currentFile = fs.readFileSync(
-      path.join(__dirname, 'virus-data', 'latestfile.txt'),
+      path.join(__dirname, '../', 'virus-data', 'latestfile.txt'),
       'utf8'
     );
 

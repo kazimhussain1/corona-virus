@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import Table from 'react-bootstrap/Table';
 
-
-
 class Tablefeed extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       data: this.props.data[this.props.data.length - 1]
-    }
+    };
   }
-
 
   render() {
     return (
@@ -25,7 +22,6 @@ class Tablefeed extends Component {
           <Table striped bordered hover variant="dark">
             <thead>
               <tr>
-
                 <th></th>
 
                 <th>THE WHUAN VIRUS</th>
@@ -33,13 +29,11 @@ class Tablefeed extends Component {
             </thead>
             <tbody>
               <tr>
-
                 <td>NUMBER OF INFECTIONS</td>
 
                 <td>{this.state.data.confirmed_cases}</td>
               </tr>
               <tr>
-
                 <td>Number of Deaths</td>
 
                 <td>{this.state.data.deaths}</td>
@@ -53,8 +47,6 @@ class Tablefeed extends Component {
           </Table>
         </div>
       </div>
-
-
     );
   }
 }

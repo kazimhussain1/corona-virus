@@ -2,30 +2,30 @@
     {
         "place": "Mainland China",
         "province": "Hubei",
-        "confirmed_cases": 70446,
-        "deaths": 1765,
-        "recovered": 10748,
+        "confirmed_cases": 72364,
+        "deaths": 1863,
+        "recovered": 12455,
         "code": "CN"
     },
     {
         "place": "Others",
         "province": "Diamond Princess cruise ship",
-        "confirmed_cases": 355,
+        "confirmed_cases": 454,
         "deaths": 0,
         "recovered": 0
     },
     {
         "place": "Singapore",
         "province": "",
-        "confirmed_cases": 75,
+        "confirmed_cases": 77,
         "deaths": 0,
-        "recovered": 18,
+        "recovered": 24,
         "code": "SG"
     },
     {
         "place": "Japan",
         "province": "",
-        "confirmed_cases": 59,
+        "confirmed_cases": 66,
         "deaths": 1,
         "recovered": 12,
         "code": "JP"
@@ -33,7 +33,7 @@
     {
         "place": "Hong Kong",
         "province": "Hong Kong",
-        "confirmed_cases": 57,
+        "confirmed_cases": 60,
         "deaths": 1,
         "recovered": 2,
         "code": "HK"
@@ -41,17 +41,17 @@
     {
         "place": "Thailand",
         "province": "",
-        "confirmed_cases": 34,
+        "confirmed_cases": 35,
         "deaths": 0,
-        "recovered": 14,
+        "recovered": 15,
         "code": "TH"
     },
     {
         "place": "South Korea",
         "province": "",
-        "confirmed_cases": 29,
+        "confirmed_cases": 30,
         "deaths": 0,
-        "recovered": 9,
+        "recovered": 10,
         "code": "KR"
     },
     {
@@ -65,7 +65,7 @@
     {
         "place": "Taiwan",
         "province": "Taiwan",
-        "confirmed_cases": 20,
+        "confirmed_cases": 22,
         "deaths": 1,
         "recovered": 2,
         "code": "TW"
@@ -123,13 +123,13 @@
         "province": "Queensland",
         "confirmed_cases": 15,
         "deaths": 0,
-        "recovered": 8,
+        "recovered": 10,
         "code": "AU"
     },
     {
         "place": "Canada",
         "province": "British Columbia",
-        "confirmed_cases": 7,
+        "confirmed_cases": 8,
         "deaths": 0,
         "recovered": 1,
         "code": "CA"
@@ -187,7 +187,7 @@
         "province": "",
         "confirmed_cases": 1,
         "deaths": 0,
-        "recovered": 0,
+        "recovered": 1,
         "code": "BE"
     },
     {
@@ -239,10 +239,129 @@
         "code": "SE"
     },
     {
+        "place": "Last Update",
+        "province": "Country/Region",
+        "confirmed_cases": null,
+        "deaths": null,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T23:13:06",
+        "province": "Mainland China",
+        "confirmed_cases": 1794,
+        "deaths": 8087,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T12:43:02",
+        "province": "Mainland China",
+        "confirmed_cases": 4,
+        "deaths": 524,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T14:53:02",
+        "province": "Mainland China",
+        "confirmed_cases": 16,
+        "deaths": 509,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T11:23:06",
+        "province": "Mainland China",
+        "confirmed_cases": 0,
+        "deaths": 507,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T11:43:01",
+        "province": "Mainland China",
+        "confirmed_cases": 3,
+        "deaths": 577,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T09:13:07",
+        "province": "Mainland China",
+        "confirmed_cases": 6,
+        "deaths": 280,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T01:33:02",
+        "province": "Mainland China",
+        "confirmed_cases": 1,
+        "deaths": 275,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T10:23:04",
+        "province": "Mainland China",
+        "confirmed_cases": 2,
+        "deaths": 448,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T11:03:06",
+        "province": "Mainland China",
+        "confirmed_cases": 6,
+        "deaths": 250,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T13:13:09",
+        "province": "Mainland China",
+        "confirmed_cases": 3,
+        "deaths": 156,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T08:03:06",
+        "province": "Mainland China",
+        "confirmed_cases": 11,
+        "deaths": 85,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T14:33:04",
+        "province": "Others",
+        "confirmed_cases": 0,
+        "deaths": 0,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T01:23:02",
+        "province": "Mainland China",
+        "confirmed_cases": 4,
+        "deaths": 114,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T23:53:02",
+        "province": "Mainland China",
+        "confirmed_cases": 1,
+        "deaths": 161,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T13:03:06",
+        "province": "Mainland China",
+        "confirmed_cases": 3,
+        "deaths": 122,
+        "recovered": null
+    },
+    {
+        "place": "2020-02-17T11:13:16",
+        "province": "Mainland China",
+        "confirmed_cases": 1,
+        "deaths": 57,
+        "recovered": null
+    },
+    {
         "place": "WORLD",
-        "confirmed_cases": 71226,
-        "deaths": 1770,
-        "affected_countries": 29,
-        "recovered": 10865
+        "confirmed_cases": null,
+        "deaths": null,
+        "affected_countries": 46,
+        "recovered": null
     }
 ]
