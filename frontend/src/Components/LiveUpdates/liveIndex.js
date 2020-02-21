@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import Zoom from 'react-reveal/Zoom';
+import Carousel from 'react-bootstrap/Carousel';
 import axios from 'axios';
 
 export default class liveIndex extends Component {
@@ -31,25 +31,17 @@ export default class liveIndex extends Component {
       <div />
     ) : (
       this.state.newsData.map((box, i) => (
-        <Zoom>
-          <div className="pricing_item">
-            <div className="pricing_inner_wrapper">
-              <div className="pricing_title">
-                <a className="source" href={box.url}>
-                  <span className="source">
-                    {this.state.newsData[i].source.name}
-                  </span>
-                </a>
-                <span className="headline">{this.state.newsData[i].title}</span>
-              </div>
-              <div className="pricing_description">
-                {this.state.newsData[i].description}
-
-                <div className="time">{this.state.newsData[i].publishedAt}</div>
-              </div>
-            </div>
-          </div>
-        </Zoom>
+        <Carousel.Item
+          key={i}
+          style={{ height: '50vh', width: '50vh', margin: 'auto' }}
+        >
+          <Carousel.Caption>
+            <h3>
+              <span className="source">chtyus</span>
+            </h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
       ))
     );
 
@@ -58,7 +50,10 @@ export default class liveIndex extends Component {
       <div className="bck_black">
         <div className="center_wrapper  pricing_section">
           <h2>Live Updates</h2>
-          <div className="pricing_wrapper">{this.showBoxes()}</div>
+          <br />
+          <div className="pricing_wrapper">
+            <Carousel>{this.showBoxes()}</Carousel>
+          </div>
         </div>
       </div>
     );

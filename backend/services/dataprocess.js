@@ -14,6 +14,11 @@ exports.parseCsvString = csvString => {
   var r = csvString.replace(/"[^"]+"/g, function(v) {
     return v.replace(/,/g, '-').replace(' ', '');
   });
+
+  const end = r.indexOf('Province/State', 'Province/State'.length);
+
+  r = r.substring(0, end);
+
   dataPoints = r
     .replace(/\n/g, ',')
     .replace(/"/g, '')
@@ -27,7 +32,7 @@ exports.parseCsvString = csvString => {
   //Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered
   //    0                1            2          3        4       5
   console.log(r);
-  while (index < dataPoints.length && dataPoints[index] != 'Province/State') {
+  while (index+5 < dataPoints.length && dataPoints[index] != 'Province/State') {
     sumConfirmed += parseInt(dataPoints[index + 3]);
     sumDeaths += parseInt(dataPoints[index + 4]);
     sumRecovered += parseInt(dataPoints[index + 5]);

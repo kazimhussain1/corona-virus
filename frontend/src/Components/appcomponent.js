@@ -41,6 +41,7 @@ class appcomponent extends Component {
         <LiveFeed data={this.state.data} />
         <Table data={this.state.data} />
         <CountryTable data={this.state.data} />
+        <Graph />
       </div>
     );
   }
