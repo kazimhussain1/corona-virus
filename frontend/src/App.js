@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import './carousel.min.css';
 import AppComponent from './Components/appcomponent';
 
 
@@ -9,7 +10,7 @@ class App extends Component {
     // console.log(this.state.data)
     return (
       <React.Fragment>
-        <AppComponent/>
+        <AppComponent />
       </React.Fragment >
 
     );

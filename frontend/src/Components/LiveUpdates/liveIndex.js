@@ -26,36 +26,45 @@ export default class liveIndex extends Component {
       });
   }
 
-  showBoxes = () =>
-    this.state.newsData === undefined ? (
+  showBoxes = () => {
+
+    
+
+
+
+    return this.state.newsData === undefined ? (
       <div />
     ) : (
-      this.state.newsData.map((box, i) => (
-        <Carousel.Item
-          key={i}
-          style={{ height: '50vh', width: '50vh', margin: 'auto' }}
-        >
-          <Carousel.Caption>
-            <h3>
-              <span className="source">chtyus</span>
-            </h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      ))
-    );
+        this.state.newsData.map((item, i) => (
+          <Carousel.Item
+            key={i}
+          >
+            <img className="carousel-image" src={item.urlToImage} >
+            </img>
+            <Carousel.Caption>
+              <h3>
+                <span className="source">{item.source.name}</span>
+              </h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item >
+        ))
+      );
+  }
 
   render() {
     return (
-      <div className="bck_black">
-        <div className="center_wrapper  pricing_section">
-          <h2>Live Updates</h2>
-          <br />
-          <div className="pricing_wrapper">
-            <Carousel>{this.showBoxes()}</Carousel>
+      this.state.newsData == undefined ? <div /> : (
+        <div className="bck_black">
+          <div className="center_wrapper  pricing_section">
+            <h2>Live Updates</h2>
+            <br />
+            <div className="pricing_wrapper">
+              <Carousel>{this.showBoxes()}</Carousel>
+            </div>
           </div>
         </div>
-      </div>
+      )
     );
   }
 }

@@ -7,38 +7,14 @@ const cron = require('cron');
 const axios = require('axios');
 const path = require('path');
 const service = require('./services/background-services');
+const api = require('./api/api')
 
 app.use(cors());
 
-app.get('/api/virus-data', (req, res) => {
-  const latestfile = fs.readFileSync(
-    path.join(__dirname, 'virus-data', 'latestfile.txt'),
-    'utf8'
-  );
 
-  const virus_data = fs.readFileSync(
-    path.join(__dirname, 'virus-data', latestfile.replace('.csv', '.json'))
-  );
+app.use('/api', api);
 
-  res.setHeader('Content-Type', 'application/json');
-  res.send(virus_data);
-});
 
-app.get('/api/mapTopoData', (req, res) => {
-  const world_data = fs.readFileSync(
-    path.join(__dirname, 'data', 'world-map.json')
-  );
-
-  res.send(world_data);
-});
-
-app.get('/api/news', (req, res) => {
-  const world_data = fs.readFileSync(
-    path.join(__dirname, 'data', 'news-data.json')
-  );
-  res.setHeader('Content-Type', 'application/json');
-  res.send(world_data);
-});
 
 let services = new service.BackgroundServices();
 
