@@ -28,7 +28,7 @@ export default class liveIndex extends Component {
 
   showBoxes = () => {
 
-    
+
 
 
 
@@ -42,10 +42,15 @@ export default class liveIndex extends Component {
             <img className="carousel-image" src={item.urlToImage} >
             </img>
             <Carousel.Caption>
-              <h3>
-                <span className="source">{item.source.name}</span>
-              </h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <b className="carousel-head">
+                {item.source.name}
+              </b>
+              <p>{item.description}</p>
+              <span>
+                <b className="updatedAt">{item.publishedAt}</b>
+                <a href={item.url} style={{ float: "right" }}>Read More</a>
+              </span>
+
             </Carousel.Caption>
           </Carousel.Item >
         ))

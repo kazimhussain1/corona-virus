@@ -12,7 +12,7 @@ class appcomponent extends Component {
     super();
 
     this.state = {
-      data: undefined
+      data: []
     };
   }
 
@@ -23,27 +23,27 @@ class appcomponent extends Component {
         this.setState({ data: res.data });
 
         console.log(res.data);
-        console.log('yolo');
+        console.log('virus data loaded');
       })
       .catch(err => {
         console.log(err);
-        console.log('swag');
+        console.log('virus data not loaded');
       });
   }
 
   render() {
-    return this.state.data === undefined ? (
+    return this.state.data.length === 0 ? (
       <div />
     ) : (
-      <div>
-        <Header />
-        <Featured mapData={this.state.data} />
-        <LiveFeed data={this.state.data} />
-        <Table data={this.state.data} />
-        <CountryTable data={this.state.data} />
-        <Graph />
-      </div>
-    );
+        <div>
+          <Header />
+          <Featured mapData={this.state.data} />
+          <LiveFeed data={this.state.data} />
+          <Table data={this.state.data} />
+          <CountryTable data={this.state.data} />
+          <Graph />
+        </div>
+      );
   }
 }
 
