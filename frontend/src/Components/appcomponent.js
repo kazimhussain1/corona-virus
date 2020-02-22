@@ -18,7 +18,7 @@ class appcomponent extends Component {
 
   componentDidMount() {
     axios
-      .get('http://127.0.0.1:9000/api/virus-data/')
+      .get('https://corana-virus-api.herokuapp.com/api/virus-data/')
       .then(res => {
         this.setState({ data: res.data });
 

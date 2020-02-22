@@ -9,7 +9,7 @@ import {
 
 // const geoUrl =
 //   'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
-const geoUrl = 'http://localhost:9000/api/mapTopoData';
+const geoUrl = 'https://corana-virus-api.herokuapp.com/api/mapTopoData';
 const geoUrlChina =
   'https://raw.githubusercontent.com/deldersveld/topojson/master/countries/china/china-provinces.json';
 
@@ -96,7 +96,7 @@ class Map extends Component {
                             fill: this.fillColorWRTData(geography),
                             stroke:
                               geography.properties.CONTINENT ===
-                              this.state.highlighted
+                                this.state.highlighted
                                 ? '#9E1030'
                                 : '#B2A27D',
                             strokeWidth: 0.75,

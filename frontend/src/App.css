@@ -40,7 +40,7 @@ header .header_logo_title {
 .root {
   overflow-x: scroll;
 }
-@media screen and (min-width: 374px) and (max-width: 768px) {
+@media only screen and (min-width: 374px) and (max-width: 768px) {
   .countdown {
     font-size: 14px !important;
     border-right: 1px solid #f44336;
@@ -157,7 +157,7 @@ header .header_logo_title {
   margin-right: 5rem;
 }
 
-@media screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   .countdown {
     font-size: 14px !important;
     border-right: 1px solid #f44336;
@@ -174,9 +174,15 @@ header .header_logo_title {
   .CountriesAffected {
     overflow-x: scroll;
   }
+  .carousel-control-next-icon{
+    display:none !important;
+  }
+  .carousel-control-prev-icon{
+    display:none !important;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .CountriesAffected {
     margin-right: 0rem;
     margin-left: 0rem;
@@ -215,7 +221,7 @@ header .header_logo_title {
 b{
   font-size: 1.5rem;
 }
-@media screen and (max-width:768px){
+@media only screen and (max-width:768px){
   .carousel-image{
     max-width: 190px;
   }

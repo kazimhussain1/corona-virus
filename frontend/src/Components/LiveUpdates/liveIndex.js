@@ -14,7 +14,7 @@ export default class liveIndex extends Component {
 
   componentDidMount() {
     axios
-      .get('http://127.0.0.1:9000/api/news')
+      .get('https://corana-virus-api.herokuapp.com/api/news')
       .then(res => {
         console.log(res.data);
         this.setState({ newsData: res.data });
@@ -38,20 +38,22 @@ export default class liveIndex extends Component {
         this.state.newsData.map((item, i) => (
           <Carousel.Item
             key={i}
-          >
-            <img className="carousel-image" src={item.urlToImage} >
-            </img>
-            <Carousel.Caption>
-              <b className="carousel-head">
-                {item.source.name}
-              </b>
-              <p>{item.description}</p>
-              <span>
-                <b className="updatedAt">{item.publishedAt}</b>
-                <a href={item.url} style={{ float: "right" }}>Read More</a>
-              </span>
 
-            </Carousel.Caption>
+          >
+            <a href={item.url} target="_blank">
+              <img className="carousel-image" src={item.urlToImage} >
+              </img>
+              <Carousel.Caption>
+                <b className="carousel-head">
+                  {item.source.name}
+                </b>
+                <p>{item.description}</p>
+                <span>
+                  <b className="updatedAt">{item.publishedAt}</b>
+                </span>
+
+              </Carousel.Caption>
+            </a>
           </Carousel.Item >
         ))
       );

@@ -23,7 +23,7 @@ class Graphs extends Component {
   componentDidMount() {
 
     axios
-      .get('http://127.0.0.1:9000/api/virus-data/time-series')
+      .get('https://corana-virus-api.herokuapp.com/api/virus-data/time-series')
       .then(res => {
         this.setState({ chartData: res.data });
 
