@@ -24,6 +24,7 @@ export default class Header extends Component {
           position="fixed"
           style={{
             backgroundColor: this.state.headerShow ? '#2f2f2f' : 'transparent',
+            color: this.state.headerShow ? '#EEEEEE' : '#2f2f2f',
             transition: 'all 0.3s',
             boxShadow: 'none',
             padding: '10px 0px'

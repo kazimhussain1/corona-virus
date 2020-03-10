@@ -10,4 +10,4 @@ fs.writeFileSync(
   JSON.stringify(workerData)
 );
 
-parentPort.postMessage({ message: 'File successfully written to.' });
+parentPort.postMessage({ message: 'News Successfully Fetched.' });

@@ -9,7 +9,7 @@ exports.parseCsvString = csvString => {
   var lineCount = 0;
 
   //csvString = csvString.replace('', 'Null')
-  console.log(csvString);
+ 
 
   var r = csvString.replace(/"[^"]+"/g, function(v) {
     return v.replace(/,/g, '-').replace(' ', '');
@@ -23,15 +23,12 @@ exports.parseCsvString = csvString => {
     .replace(/\n/g, ',')
     .replace(/"/g, '')
     .split(',');
-  //dataPoints = csvString.split(/\n/g)
-  // console.log("-------------------------------------------------")
-  // console.log(dataPoints)
+
 
   var index = 6;
 
   //Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered
   //    0                1            2          3        4       5
-  console.log(r);
   while (index+5 < dataPoints.length && dataPoints[index] != 'Province/State') {
     sumConfirmed += parseInt(dataPoints[index + 3]);
     sumDeaths += parseInt(dataPoints[index + 4]);

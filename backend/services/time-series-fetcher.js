@@ -1,11 +1,13 @@
 var fs = require('fs');
 const axios = require('axios');
 const path = require('path');
+const parse = require('csv-parse');
 
 const { workerData, parentPort } = require('worker_threads');
 
-const parse = require('csv-parse');
+
 class TimeSeriesFetcher {
+
   constructor() {
     this.fileNames = [
       'time_series_19-covid-Confirmed.csv',

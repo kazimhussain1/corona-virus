@@ -51,7 +51,7 @@ function writeGitFile() {
 
   if (index < saveFile.length) {
     //if(i+1 == saveFile.length ){}
-    // console.log(saveFile[i]);
+  
 
     axios
       .get(

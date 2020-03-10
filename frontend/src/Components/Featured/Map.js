@@ -13,7 +13,9 @@ const geoUrl = 'https://corana-virus-api.herokuapp.com/api/mapTopoData';
 const geoUrlChina =
   'https://raw.githubusercontent.com/deldersveld/topojson/master/countries/china/china-provinces.json';
 
-const colors = ['#AA2277', '#183881', '#AF8C6E', '#2B8A9F', '#72A69B'];
+const colors = ['#EC7D58', '#E1674E', '#CF443D', '#C53134', '#74181A'];
+const hoverColors = ['#F78762', '#EA7057‬', '#D84D46', '#CE3A3D', '#7D2123'];
+
 
 class Map extends Component {
   constructor(props) {
@@ -42,9 +44,21 @@ class Map extends Component {
 
   hoverColorWRTData = d => {
     const countryCode = d.properties.ISO_A2;
-    // console.log(countryCode);
 
-    return '#' + ((Math.random() * 0xffffff) << 0).toString(16);
+    const { mapData } = this.state;
+
+    let color = '#E7E7E7';
+    mapData.forEach(item => {
+      if (item.code === countryCode) {
+        if (item.confirmed_cases > 10000) color = hoverColors[4];
+        else if (item.confirmed_cases > 1000) color = hoverColors[3];
+        else if (item.confirmed_cases > 100) color = hoverColors[2];
+        else if (item.confirmed_cases > 10) color = hoverColors[1];
+        else if (item.confirmed_cases > 1) color = hoverColors[0];
+      }
+    });
+
+    return color;
   };
 
   fillColorWRTData = d => {
@@ -52,17 +66,20 @@ class Map extends Component {
 
     const { mapData } = this.state;
 
-    let color = '#424242';
+    let color = '#DDDDDD';
     mapData.forEach(item => {
-      if (item.code == countryCode) {
-        if (item.confirmed_cases > 0) color = '#AA0F0F';
+      if (item.code === countryCode) {
+        if (item.confirmed_cases > 10000) color = colors[4];
+        else if (item.confirmed_cases > 1000) color = colors[3];
+        else if (item.confirmed_cases > 100) color = colors[2];
+        else if (item.confirmed_cases > 10) color = colors[1];
+        else if (item.confirmed_cases > 1) color = colors[0];
       }
     });
 
     return color;
   };
   render() {
-    const { mapData } = this.state;
     return (
       <div
         className="carrousel_wrapper"
@@ -75,12 +92,12 @@ class Map extends Component {
           <div
             className="carrousel_image"
             style={{
-              background: `rgba(50, 50, 50, 1)`,
+              background: `#EEEEEE`,
               height: `${window.innerHeight}px`
             }}
           >
             <ComposableMap style={{ width: '100%', height: '100%' }}>
-              <ZoomableGroup zoom={0.82}>
+              <ZoomableGroup zoom={window.innerWidth<500?1:0.82} disablePanning={true}>
                 <Geographies geography={geoUrl}>
                   {(geographies, projection) =>
                     geographies.map((geography, i) => (
@@ -94,25 +111,21 @@ class Map extends Component {
                         style={{
                           default: {
                             fill: this.fillColorWRTData(geography),
-                            stroke:
-                              geography.properties.CONTINENT ===
-                                this.state.highlighted
-                                ? '#9E1030'
-                                : '#B2A27D',
-                            strokeWidth: 0.75,
+                            stroke: '#242424',
+                            strokeWidth: 0.25,
                             outline: 'none',
                             transition: 'all 250ms'
                           },
                           hover: {
                             fill: this.hoverColorWRTData(geography),
-                            stroke: '#9E1030',
+                            stroke: '#000000',
                             strokeWidth: 0.75,
                             outline: 'none',
                             transition: 'all 250ms'
                           },
                           pressed: {
-                            fill: '#DD4132',
-                            stroke: '#9E1030',
+                            fill: this.hoverColorWRTData(geography),
+                            stroke: '#000000',
                             strokeWidth: 0.75,
                             outline: 'none',
                             transition: 'all 250ms'

@@ -5,20 +5,18 @@ import {
   LineChart,
   Line,
   XAxis,
+  YAxis,
   Tooltip,
   CartesianGrid,
-  Label,
-  LabelList
 } from 'recharts';
 
 class Graphs extends Component {
   constructor() {
     super();
     this.state = {
-      chartData: {}
-    }
+      chartData: []
+    };
   }
-
 
   componentDidMount() {
 
@@ -42,15 +40,16 @@ class Graphs extends Component {
     return (
       <div className="container">
         <div className="row">
-          {this.state.chartData.confirmed_cases == undefined ? <div /> : (
+          {this.state.chartData.confirmed_cases === undefined ? <div /> : (
             <div className="col-md-6">
               <LineChart
-                width={480}
-                height={480}
+                width={window.innerWidth<500?320:480}
+                height={window.innerWidth<500?320:480}
                 data={this.state.chartData.confirmed_cases}
                 margin={{ top: 5, right: 10, left: 0, bottom: 5 }}
               >
                 <XAxis dataKey="date" />
+                <YAxis type="number" domain={[0, dataMax=>(Math.ceil(dataMax/1000)*1000)]} />
                 <Tooltip />
                 <CartesianGrid stroke="#f5f5f5" />
                 <Line
@@ -62,17 +61,20 @@ class Graphs extends Component {
                 />
                 {/* <Line type="monotone" dataKey="pv" stroke="#387908" yAxisId={1} /> */}
               </LineChart>
+
+            <h3 style={{margin: 'auto', textAlign:'center'}}>Confrimed Cases</h3>
             </div>)
           }
-          {this.state.chartData.deaths == undefined ? <div /> : (
+          {this.state.chartData.deaths === undefined ? <div /> : (
             <div className="col-md-6">
               <LineChart
-                width={480}
-                height={480}
+                width={window.innerWidth<500?320:480}
+                height={window.innerWidth<500?320:480}
                 data={this.state.chartData.deaths}
                 margin={{ top: 5, right: 10, left: 0, bottom: 5 }}
               >
                 <XAxis dataKey="date" />
+                <YAxis type="number" domain={[0, dataMax=>(Math.ceil(dataMax/1000)*1000)]} />
                 <Tooltip />
                 <CartesianGrid stroke="#f5f5f5" />
                 <Line
@@ -80,20 +82,23 @@ class Graphs extends Component {
                   dataKey="count"
                   stroke="#ff7300"
                   yAxisId={0}
+                  dot={null}
                 />
                 {/* <Line type="monotone" dataKey="pv" stroke="#387908" yAxisId={1} /> */}
               </LineChart>
+              <h3 style={{margin: 'auto', textAlign:'center'}}>Deaths</h3>
             </div>)
           }
-          {this.state.chartData.recovered == undefined ? <div /> : (
+          {this.state.chartData.recovered === undefined ? <div /> : (
             <div className="col-md-6" style={{ margin: "auto" }}>
               <LineChart
-                width={480}
-                height={480}
+                width={window.innerWidth<500?320:480}
+                height={window.innerWidth<500?320:480}
                 data={this.state.chartData.recovered}
                 margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
               >
                 <XAxis dataKey="date" />
+                <YAxis type="number" domain={[0, dataMax=>(Math.ceil(dataMax/1000)*1000)]} />
                 <Tooltip />
                 <CartesianGrid stroke="#f5f5f5" />
                 <Line
@@ -101,14 +106,16 @@ class Graphs extends Component {
                   dataKey="count"
                   stroke="#ff7300"
                   yAxisId={0}
+                  dot={null}
                 />
                 {/* <Line type="monotone" dataKey="pv" stroke="#387908" yAxisId={1} /> */}
               </LineChart>
+              <h3 style={{margin: 'auto', textAlign:'center'}}>Recovered</h3>
             </div>)}
         </div>
       </div>
     );
   }
-
 }
+
 export default Graphs;
