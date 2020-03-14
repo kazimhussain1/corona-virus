@@ -25,10 +25,10 @@ exports.parseCsvString = csvString => {
     .split(',');
 
 
-  var index = 6;
+  var index = 8;
 
-  //Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered
-  //    0                1            2          3        4       5
+  //Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude
+  //    0                1            2          3        4       5          6        7
   while (index+5 < dataPoints.length && dataPoints[index] != 'Province/State') {
     sumConfirmed += parseInt(dataPoints[index + 3]);
     sumDeaths += parseInt(dataPoints[index + 4]);
@@ -62,7 +62,7 @@ exports.parseCsvString = csvString => {
       if (newEntry.place === 'Others') sumAffectedCountries -= 1;
     }
 
-    index += 6;
+    index += 8;
   }
 
   data.push({
