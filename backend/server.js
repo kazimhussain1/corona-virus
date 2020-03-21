@@ -54,7 +54,7 @@ const timeSeriesJob = cron.job('0 30 */12 * * *', () =>
   runTimeSeriesFetcher().catch(err => console.error(err))
 );
 
-// runGitFetcher().catch(err => console.error(err))
+runGitFetcher().catch(err => console.error(err))
 // runTimeSeriesFetcher().catch(err => console.error(err))
 
 

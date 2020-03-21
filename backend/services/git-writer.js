@@ -2,6 +2,7 @@ var fs = require('fs');
 const axios = require('axios');
 const dataprocess = require('./dataprocess.js');
 const path = require('path');
+const client = require('../db/mongo');
 
 const { workerData, parentPort } = require('worker_threads');
 
@@ -23,6 +24,8 @@ function loadCountryCodes(jsonData, fileName) {
   if (!fs.existsSync(path.join(__dirname, '../', 'virus-data'))) {
     fs.mkdirSync(path.join(__dirname, '../', 'virus-data'));
   }
+
+  ///////////////////////////////////////
   fs.writeFileSync(
     path.join(
       __dirname,
@@ -33,10 +36,36 @@ function loadCountryCodes(jsonData, fileName) {
     newData
   );
 
-  fs.writeFileSync(
-    path.join(__dirname, '../', 'virus-data', 'latestfile.txt'),
-    fileName
-  );
+  // fs.writeFileSync(
+  //   path.join(__dirname, '../', 'virus-data', 'latestfile.txt'),
+  //   fileName
+  // );
+
+  client.connect().then(()=>{
+
+    try{
+    client.db('corona_db').collection('affected_countries').insertOne({
+      date: fileName.replace('.csv',''),
+      country_list:jsonData})
+
+      let myQuery = {name: 'latest_file'};
+      let newValue = {$set:{date: fileName}};
+
+      client.db('corona_db').collection('latest_date').updateOne(myQuery,newValue, (err, res)=>{
+
+        if (err) throw err;
+
+        // console.log('yeah boii', res)
+      });
+    } catch(e){
+      console.log(e)
+    }
+  }).catch((err)=>{
+    console.log(err)
+  })
+
+
+  //////////////////////////////////////////////
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -49,9 +78,11 @@ var flag = 0;
 function writeGitFile() {
   // always executed
 
+  console.log('we here before if')
+
   if (index < saveFile.length) {
     //if(i+1 == saveFile.length ){}
-  
+    console.log('we here before axios')
 
     axios
       .get(
@@ -73,6 +104,7 @@ function writeGitFile() {
 
         let Gitcontent = buff.toString('ascii');
         let jsonData = dataprocess.parseCsvString(Gitcontent);
+        console.log('we here')
         loadCountryCodes(jsonData, saveFile[index]);
 
         index++;
@@ -102,27 +134,52 @@ axios
   )
   .then(function(res) {
     nameArray = res.data;
-    var currentFile = fs.readFileSync(
-      path.join(__dirname, '../', 'virus-data', 'latestfile.txt'),
-      'utf8'
-    );
+    // var currentFile = fs.readFileSync(
+    //   path.join(__dirname, '../', 'virus-data', 'latestfile.txt'),
+    //   'utf8'
+    // );
 
-    nameArray.forEach(item => {
-      if (flag === 1) {
-        if (path.extname(item.name) === '.csv') {
-          saveFile.push(item.name);
-        }
-      }
+    let currentFile = null;
 
-      if (item.name === currentFile) {
-        flag = 1;
-      }
-    });
+    client.connect().then(()=>{
 
-    flag = 0;
+      let myQuery = {name: 'latest_file'};
+      client.db('corona_db').collection('latest_date').findOne(myQuery, (err, res)=>{
+
+        if (err) throw err;
+
+       currentFile = res.date;
+
+
+        nameArray.forEach(item => {
+          if (flag === 1) {
+            if (path.extname(item.name) === '.csv') {
+              saveFile.push(item.name);
+            }
+          }
+    
+          if (item.name === currentFile) {
+            flag = 1;
+          }
+        });
+      
+        console.log(saveFile);
+    
+        flag = 0;
+
+        writeGitFile();  
+
+
+      })
+
+    }).catch((err)=>{
+      console.log(err);
+    })
+
+
+    
   })
   .catch(function(error) {
     // handle error
     console.log(error);
   })
-  .then(writeGitFile);
